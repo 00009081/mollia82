@@ -19,11 +19,11 @@ $(function () {
 
 $('.first').click(function(){
     $('input#input').show();
-    $('.option_wrap').hide()
+    $('.option_wrap').hide();
 });
 
 function option1(){
-    document.getElementById('select').innerHTML = '직접 입력'
+    document.getElementById('select').innerHTML = '직접 입력';
 };
 
 function option2(){
