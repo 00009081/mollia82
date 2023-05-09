@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1400">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <title>mollia</title>
+    <link rel="stylesheet" href="css/style_main.css">
+    <script type="text/javascript"
+        src="https://www.cuchenmall.co.kr/wm_engine_SW/_engine/common/jquery/jquery-3.1.1.min.js"></script>
+
+    <link rel="stylesheet" href="css/main_swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/main_swiper/style.css">
+</head>
+
+<body>
+
+    <div id="fixed">
+        <div id="header_wrap"><!--header_S-->
+            <div class="header">
+                <a href="index.html" class="logo"><img src="image/header/header_gnb_logo[120_32].png"
+                        alt="logo"></a>
+                <ul class="top_link">
+                    <li><a href="#"><img src="image/header/header-icon_search[2].png" alt="search"></a></li>
+                    <li><a href="#"><img src="image/header/header-icon_login[2].png" alt="login"></a></li>
+                    <li><a href="#"><img src="image/header/header-icon_cart[2].png" alt="cart"></a></li>
+                </ul>
+            </div>
+            <div class="header_link">
+                <ul class="gnb">
+                    <li><a href="sub/sub1.html">BRAND STORY</a></li>
+                    <li><a href="sub/sub2.html">SHOP</a></li>
+                    <li><a href="sub/sub3.html">CLASS</a></li>
+                    <li><a href="sub/sub4.html">COMMUNITY</a></li>
+                </ul>
+            </div>
+        </div><!--header_E-->
+    </div>
+
+    <div id="main_wrap"><!--main_S-->
+        <div id="main">
+            <p class="main_slide_back">
+            </p>
+            <div class="main_slide_wrap">
+                <div class="main_slide">
+                    <!--Slide_S-->
+                    <section class="inner hero-wrap">
+                        <!-- Swiper -->
+                        <div class="slide-area">
+                            <div id="progress"></div>
+                            <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                                <div class="swiper-wrapper"
+                                    style="transition-duration: 0ms; transform: translate3d(-8757px, 0px, 0px);">
+                                    <div class="swiper-slide white"
+                                        style="background-image: url(image/index/main/main_slide1.jpg); width: 1251px;"
+                                        data-swiper-slide-index="1">
+                                    </div>
+                                    <div class="swiper-slide white swiper-slide-prev"
+                                        style="background-image: url(image/index/main/main_slide2.jpg); width: 1251px;"
+                                        data-swiper-slide-index="2">
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-active"
+                                        style="background-image: url(image/index/main/main_slide3.jpg); width: 1251px;"
+                                        data-swiper-slide-index="3">
+                                    </div>
+                                </div>
+                                <!-- slide-nav -->
+                                <div class="slide-nav">
+                                    <!-- Add Pagination -->
+                                    <div
+                                        class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                                        <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                            aria-label="Go to slide 1">01</span>
+                                        <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                            aria-label="Go to slide 2">02</span>
+                                        <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                            aria-label="Go to slide 3">03</span>
+                                    </div>
+                                    <!-- Add Pause -->
+                                    <div class="btn-pause pause">
+                                        <span class="material-icons i-pause">
+                                            <img src="image/index/main/stop.png" alt="">
+                                        </span>
+                                        <span class="material-icons i-play">
+                                            <img src="image/index/main/play.png" alt="">
+                                        </span>
+                                    </div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-prev" tabindex="0" role="button"
+                                        aria-label="Previous slide">
+                                        <div class="btn-round">
+                                            <span class="material-icons">
+                                                <img src="image/index/main/arrow01.png" alt="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide">
+                                        <div class="btn-round">
+                                            <span class="material-icons">
+                                                <img src="image/index/main/arrow02.png" alt="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- script -->
+                    <script src="js/swiper.min.js"></script>
+                    <script>
+
+                        $(function () {
+
+                            $('.footer-etc__site .select-ttl').on('click', function (e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+
+                                var $ui = $(this).parents('.footer-etc__site .selectbox');
+                                $('.footer-etc__site .selectbox').not($ui).removeClass('open');
+                                $ui.toggleClass('open');
+
+                                // 스크롤 여부 확인
+                                var optionLength = $(this).siblings(".footer-etc__site .option-list").find('li').length;
+                                if (optionLength > 5) {
+                                    $('.footer-etc__site .option-list ul').addClass('scroll-in');
+                                } else {
+                                    $('.footer-etc__site .option-list ul').removeClass('scroll-in');
+                                }
+                            });
+
+                            $('.footer-etc__site .option-list a').on('click', function (e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+
+                                var selectBox = $(this).closest('.footer-etc__site .selectbox');
+
+                                selectBox.toggleClass('open');
+                                selectBox.find('.select-ttl p').text('Family Site');
+                                selectBox.find('.select-ttl').addClass('select');
+
+                                window.open($(this).attr('href'));
+                            });
+
+                            // timer Swiper
+                            var mainSlide = {
+                                slideTime: 5000, //auto Timer
+
+                                init: function () {
+                                    this.timerSlide();
+                                    this.breakSlide();
+                                },
+
+                                timerSlide: function () {
+                                    var _ = this;
+
+                                    function swiperCommon(name, time) {
+                                        var swiper = new Swiper(name + ' .swiper-container', {
+                                            slidesPerView: 1,
+                                            speed: 500,
+                                            loop: true,
+                                            autoplay: {
+                                                delay: time ? time : _.slideTime,
+                                                disableOnInteraction: false,
+                                            },
+                                            pagination: {
+                                                el: name + ' .swiper-pagination',
+                                                clickable: true,
+                                                renderBullet: function (index, className) {
+                                                    return '<span class="' + className + '">' + '0' + (index +
+                                                        1) + '</span>';
+                                                },
+                                            },
+                                            navigation: {
+                                                nextEl: name + ' .swiper-button-next',
+                                                prevEl: name + ' .swiper-button-prev',
+                                            },
+                                        });
+
+                                        swiper.on('slideChangeTransitionStart', function () {
+                                            var $Elm = $(name + ' .btn-pause');
+                                            var $bulletElm = $(name + ' .swiper-pagination-bullet');
+                                            var $bulletActiveElm = $(name + ' .swiper-pagination-bullet-active');
+
+                                            $bulletElm.removeClass('timerBar');
+                                            if (!$Elm.hasClass('pause')) {
+                                                $bulletActiveElm.removeClass('timerBar');
+                                            } else {
+                                                $bulletActiveElm.addClass('timerBar');
+                                            }
+                                        });
+
+                                        // 슬라이드 정지/재생
+                                        $(name + ' .btn-pause').on('click', function () {
+                                            var $this = $(this);
+                                            if (!$this.hasClass('pause')) {
+                                                swiper.autoplay.start();
+                                                $this.addClass('pause');
+                                                $(name + ' .swiper-pagination-bullet-active').addClass('timerBar');
+                                            } else {
+                                                swiper.autoplay.stop();
+                                                $this.removeClass('pause');
+                                                $(name + ' .swiper-pagination-bullet-active').removeClass('timerBar');
+                                            }
+                                        });
+
+                                        $(name + ' .swiper-pagination-bullet').eq(0).addClass('timerBar');
+                                    }
+                                    swiperCommon('.hero-wrap', 7000); //hero slide
+                                    swiperCommon('.newprd-wrap'); //new prd
+                                    swiperCommon('.event-wrap'); //event
+
+                                }, //timerSlide
+
+                                breakSlide: function () {
+                                    var _ = this;
+
+                                    //review
+                                    var reviewSwiper = new Swiper('.review-wrap .swiper-container', {
+                                        slidesPerView: 4,
+                                        spaceBetween: 30,
+                                        loop: true,
+                                        speed: 500,
+                                        // autoplay: {
+                                        // 	delay: _.slideTime,
+                                        // 	disableOnInteraction: false,
+                                        // },
+                                        pagination: {
+                                            el: '.review-wrap .swiper-pagination',
+                                            clickable: true,
+                                        },
+                                        navigation: {
+                                            nextEl: '.review-wrap .swiper-button-next',
+                                            prevEl: '.review-wrap .swiper-button-prev',
+                                        },
+                                        breakpoints: {
+                                            1760: {
+                                                slidesPerView: 3,
+                                                spaceBetween: 30,
+                                            },
+                                            1920: {
+                                                slidesPerView: 4,
+                                                spaceBetween: 50,
+                                            },
+                                        }
+                                    });
+
+                                    //benefit
+                                    var benefitSwiper = new Swiper('.benefit01 .swiper-container', {
+                                        slidesPerView: 5,
+                                        spaceBetween: 30,
+                                        //loop: true,
+                                        speed: 500,
+                                        // autoplay: {
+                                        // 	delay: _.slideTime,
+                                        // 	disableOnInteraction: false,
+                                        // },
+                                        pagination: {
+                                            el: '.benefit01 .swiper-pagination',
+                                            clickable: true,
+                                        },
+                                        navigation: {
+                                            nextEl: '.benefit01 .swiper-button-next',
+                                            prevEl: '.benefit01 .swiper-button-prev',
+                                        },
+                                        breakpoints: {
+                                            1440: {
+                                                slidesPerView: 3,
+                                                spaceBetween: 30,
+                                            },
+                                            1919: {
+                                                slidesPerView: 4,
+                                                spaceBetween: 30,
+                                            },
+                                            1920: {
+                                                slidesPerView: 5,
+                                                spaceBetween: 20,
+                                            },
+                                        }
+                                    });
+
+                                    //benefit
+                                    var benefitSwiper2 = new Swiper('.benefit02 .swiper-container', {
+                                        slidesPerView: 5,
+                                        spaceBetween: 30,
+                                        //loop: true,
+                                        speed: 500,
+                                        // autoplay: {
+                                        // 	delay: _.slideTime,
+                                        // 	disableOnInteraction: false,
+                                        // },
+                                        pagination: {
+                                            el: '.benefit02 .swiper-pagination',
+                                            clickable: true,
+                                        },
+                                        navigation: {
+                                            nextEl: '.benefit02 .swiper-button-next',
+                                            prevEl: '.benefit02 .swiper-button-prev',
+                                        },
+                                        breakpoints: {
+                                            1440: {
+                                                slidesPerView: 3,
+                                                spaceBetween: 30,
+                                            },
+                                            1919: {
+                                                slidesPerView: 4,
+                                                spaceBetween: 30,
+                                            },
+                                            1920: {
+                                                slidesPerView: 5,
+                                                spaceBetween: 20,
+                                            },
+                                        }
+                                    });
+
+                                    $('.main .tab-ttl li').on('click', function (e) {
+                                        benefitSwiper2.update();
+                                    });
+                                }
+
+                            } //mainSlide
+
+                            mainSlide.init();
+                        });
+                    </script>
+                    <!--Slide_E-->
+                </div>
+            </div>
+            <div class="main_text">
+                <img src="image/index/main/main_banner_logo[286_80].png" alt="logo">
+                <p class="main_text_title">
+                    생각과 마음을 담아서 만들어 공간이 찬란히 빛날 수 있도록,
+                </p>
+                <p>
+                    In that place where thoughts and
+                    <br>hearts come down To shine brightly for you.
+                </p>
+            </div>
+        </div>
+    </div><!--main_E-->
+
+    <div id="brand-story"><!--brand-story_S-->
+        <div class="brand-story_title category_s">
+            <h1 class="category">
+                <img src="image/index/brandstory/title.png" alt="brand-story">
+            </h1>
+            <p class="category_sub">
+                당신의 공간 속에, 당신의 삶 속에
+            </p>
+            <p class="category_line">
+            </p>
+        </div>
+        <div class="brand-story_pic">
+            <p class="brand-story_pic_back"></p>
+            <img src="image/index/brandstory/brand-story_back.jpg" alt="leaf" class="brand-story_leaf">
+            <img src="image/index/brandstory/brand-story_front.jpg" alt="wood" class="brand-story_wood">
+            <img src="image/index/brandstory/brand-story_background-logo[595_167].png" alt="logo"
+                class="brand-story_logo">
+        </div>
+        <div class="brand-story_text">
+            <p class="brand-story_text_title">
+                특별한
+                <br>이야기가 있는
+                <br>가구를 만듭니다.
+            </p>
+            <p class="brand-story_text_sub">
+                WE CREATE FURNITURE WITH
+                <br>A VERY SPECIAL STORY.
+            </p>
+            <a href="sub/sub1.html" class="more">
+                MORE
+            </a>
+        </div>
+    </div><!--brand-story_E-->
+
+    <div id="scroll_wrap"><!--scroll_S-->
+        <div class="scroll">
+            <div class="banner_text">
+                <p class="banner_title">
+                    mollia, 맞춤을 증명하다.
+                </p>
+                <p class="banner_sub">
+                    우리는 당신이 주문하는 순간부터 나무를 고르고 다듬습니다.
+                    <br>그리고 그 원목으로 만든 가구가 100년 가구가 될 수 있도록
+                    <br>최대한 오랜 시간동안 맞추고 기다립니다.
+                </p>
+            </div>
+        </div>
+    </div><!--scroll_E-->
+
+    <div id="class"><!--class_S-->
+        <div class="category_s">
+            <h1 class="category">
+                <img src="image/index/class/title.png" alt="class">
+            </h1>
+            <p class="category_sub">
+                당신만의 특별한 이야기를 들려주세요.
+            </p>
+            <p class="category_line">
+            </p>
+        </div>
+        <div class="class_left">
+            <p class="class_line">
+            </p>
+            <p class="class_left_text_title">
+                <span>mollia class</span>는
+            </p>
+            <p>
+                원목을 이용한 다양한 제품들 뿐만 아니라
+                <br>원목 외의 소재들과도 어우러지는
+                <br>새로운 제품을 보여드리기 위해 노력합니다.
+                <br>
+                <br>나무반지 제작 뿐만 아니라
+                <br>원목도마, 가구, 소품 등 많은 제품들을 선보이고 있습니다.
+            </p>
+            <img src="image/index/class/class_pic01.jpg" alt="class_pic01" class="class_pic01">
+        </div>
+        <div class="class_right">
+            <div class="class_right_pic">
+                <img src="image/index/class/class_pic02.jpg" alt="class_pic02" class="class_pic02">
+                <img src="image/index/class/class_pic03.jpg" alt="class_pic03" class="class_pic03">
+            </div>
+            <p>
+                원목을 이용한 다양한 제품들 뿐만 아니라
+                <br>원목 외의 소재들과도 어우러지는
+                <br>새로운 제품을 보여드리기 위해 노력합니다.
+                <br>
+                <br>나무반지 제작 뿐만 아니라
+                <br>원목도마, 가구, 소품 등 많은 제품들을 선보이고 있습니다.
+            </p>
+            <a href="sub/sub3.html" class="more">
+                MORE
+            </a>
+        </div>
+        <div class="leaf_pic">
+            <img src="image/index/leaf_01.png" alt="leaf" class="leaf_01">
+            <img src="image/index/leaf_02.png" alt="leaf" class="leaf_02">
+        </div>
+    </div><!--class_E-->
+
+    <div id="banner_wrap"><!--banner_S-->
+        <div id="banner">
+            <div class="banner_arch">
+                <img src="image/index/banner/banner.jpg" alt="banner" class="banner_pic">
+                <img src="image/index/banner/banner_background-logo[755_205].png" alt="logo" class="banner_logo">
+            </div>
+            <div class="banner_arch_text">
+                <div class="banner_arch_text_shape">
+                </div>
+                <p class="banner_arch_text_title">
+                    나와 함께 나이드는 가구,
+                </p>
+                <p class="banner_arch_text_sub">
+                    오래오래 나와 함께 나이 들어갈 100년 가구,
+                    <br>mollia가 만듭니다.
+                </p>
+            </div>
+        </div>
+    </div><!--banner_E-->
+
+    <div id="shop"><!--shop_S-->
+        <div class="category_s">
+            <h1 class="category">
+                <img src="image/index/shop/title.png" alt="shop">
+            </h1>
+            <p class="category_sub">
+                나만의 mollia를 경험해보세요.
+            </p>
+            <p class="category_line">
+            </p>
+        </div>
+        <ul class="shop_list">
+            <li>
+                <div class="shop_list_color-box_01">
+                    <img src="image/index/shop/shop_pink-logo[155_59].png" alt="logo">
+                </div>
+                <a href="sub/sub2.html">
+                    <div class="shop_list_pic">
+                        <img src="image/index/shop/shop_bed.jpg" alt="bed">
+                    </div>
+                    <div class="shop_list_hover">
+                        <h1 class="shop_list_title">
+                            <img src="image/index/shop/bed.png" alt="bed">
+                        </h1>
+                        <p class="white-line">
+                        </p>
+                        <p class="shop_list_sub">
+                            반다 침대 프레임
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="sub/sub2.html">
+                    <div class="shop_list_pic">
+                        <img src="image/index/shop/shop_desk.jpg" alt="desk">
+                    </div>
+                    <div class="shop_list_hover">
+                        <h1 class="shop_list_title">
+                            <img src="image/index/shop/desk.png" alt="desk">
+                        </h1>
+                        <p class="white-line">
+                        </p>
+                        <p class="shop_list_sub">
+                            맞춤형 책상
+                        </p>
+                    </div>
+                </a>
+                <div class="shop_list_color-box_02">
+                    <p>
+                        당신의 소중한 일상을 함께할 원목가구,
+                        <br>mollia의 디자인 컬렉션을 소개합니다.
+                    </p>
+                    <a href="sub/sub2.html" class="more shop_more">MORE</a>
+                </div>
+            </li>
+            <li>
+                <div class="shop_list_color-box_03">
+                    <img src="image/index/shop/shop_green-logo[140_106].png" alt="logo">
+                </div>
+                <a href="sub/sub2.html">
+                    <div class="shop_list_pic">
+                        <img src="image/index/shop/shop_chair.jpg" alt="bed">
+                    </div>
+                    <div class="shop_list_hover">
+                        <h1 class="shop_list_title">
+                            <img src="image/index/shop/chair.png" alt="chair">
+                        </h1>
+                        <p class="white-line">
+                        </p>
+                        <p class="shop_list_sub">
+                            헤리티지 월넛 의자
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div><!--shop_E-->
+
+    <div id="event_wrap"><!--event_S-->
+        <div id="event">
+            <div class="category_s">
+                <h1 class="category">
+                    <img src="image/index/event/title.png" alt="event">
+                </h1>
+                <p class="category_sub">
+                    mollia에서 진행하는 다양한 이벤트를 확인해보세요.
+                </p>
+                <p class="category_line">
+                </p>
+            </div>
+            <ul class="event_list">
+                <li>
+                    <a href="sub/sub4.html">
+                        <div class="event_list_pic">
+                            <img src="image/index/event/community_01.jpg" alt="event01">
+                        </div>
+                        <div class="event_list_text">
+                            <p class="event_list_text_sub">
+                                최상급 제품을 최저가로 만나는 시간!
+                            </p>
+                            <h1 class="event_list_text_title">
+                                수납장 <span>일주일 특가</span>
+                            </h1>
+                            <p class="event_list_text_date">
+                                10.23. <span>(MON)</span> - 10.29.<span>(SUN)</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="sub/sub4.html">
+                        <div class="event_list_pic">
+                            <img src="image/index/event/community_02.jpg" alt="event02">
+                        </div>
+                        <div class="event_list_text">
+                            <p class="event_list_text_sub gray sub_gray">
+                                싱 글 X 라 이 프
+                            </p>
+                            <h1 class="event_list_text_title green">
+                                혼자라서 <span>좋은 시간</span>
+                            </h1>
+                            <p class="event_list_text_date gray">
+                                10.16. <span>(MON)</span> - 10.29.<span>(SUN)</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a href="sub/sub4.html" class="more big_more">MORE</a>
+        </div>
+    </div><!--event_E-->
+
+    <div id="footer_wrap"><!--footer_S-->
+        <div id="footer">
+            <div class="footer_link_wrap">
+                <a href="index.html" class="logo">
+                    <img src="image/footer/footer_logo[220_28].png" alt="logo">
+                </a>
+                <ul class="footer_sns">
+                    <li>
+                        <a href="javascript:return false;" class="footer_sns01">
+                            <img src="image/footer/footer_sns-kakao[37].png" alt="kakao">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;" class="footer_sns02">
+                            <img src="image/footer/footer_sns-naver[37].png" alt="blog">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;" class="footer_sns03">
+                            <img src="image/footer/footer_sns-insta[37].png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;" class="footer_sns04">
+                            <img src="image/footer/footer_sns-youtube[37].png" alt="youtube">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_nav_wrap">
+                <ul class="footer_nav">
+                    <li><a href="sub/sub1.html">BRAND STORY</a></li>
+                    <li><a href="sub/sub2.html">SHOP</a></li>
+                    <li><a href="sub/sub3.html">CLASS</a></li>
+                    <li><a href="sub/sub4.html">COMMUNITY</a></li>
+                </ul>
+            </div>
+            <div class="footer_infor">
+                <p class="footer_infor_left">
+                    부산광역시 중구 중앙대로 26 다원중앙타워 10층
+                </p>
+                <ul class="footer_infor_right">
+                    <li>TEL. 051.245.1650</li>
+                    <li>FAX. 051.247.6173</li>
+                    <li>E-Mail. nrdesign@naver.com</li>
+                </ul>
+            </div>
+        </div>
+    </div><!--footer_E-->
+
+</body>
+
+</html>
