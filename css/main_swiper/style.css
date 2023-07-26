@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* slide */
+.slide-area {
+  position: relative;
+  z-index: 0;
+}
+
+.slide-area .swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slide-area .swiper-container .slide-box {
+  padding: 100px 0 0 50px;
+  text-align: left;
+}
+
+.slide-area .swiper-container .slide-box__txt {
+  padding: 30px 0 48px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.slide-area .swiper-container 
+.slide-nav {
+  display: -webkit-inline-box;
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  z-index: 1;
+  text-align: left;
+}
+
+.slide-area .swiper-container .slide-nav .swiper-pagination {
+  position: static;
+}
+
+.slide-area .swiper-container .slide-nav .swiper-pagination-bullet {
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  background: transparent;
+}
+
+.slide-area .swiper-container .slide-nav .swiper-button-next,
+.slide-area .swiper-container .slide-nav .swiper-button-prev {
+  width: 25px;
+  height: 25px;
+  position: static;
+  margin-left: 10px;
+  /* background: transparent; */
+}
+
+.slide-area .swiper-container 
+.slide-nav .btn-pause {
+  width: 25px;
+  height: 25px;
+}
+
+.slide-area .swiper-container 
+.slide-nav .btn-pause span {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.slide-area .swiper-button-next,
+.slide-area .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  z-index: 9;
+}
+
+.slide-area .btn-pause .i-pause {
+  display: none;
+}
+
+.slide-area .btn-pause .i-play {
+  display: block;
+}
+
+.slide-area .btn-pause.pause .i-pause {
+  display: block;
+}
+
+.slide-area .btn-pause.pause .i-play {
+  display: none;
+}
+
+.slide-area .timerBar {
+  position: relative;
+  margin-right: 60px;
+}
+
+.slide-area .timerBar::before,
+.slide-area .timerBar::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+}
+
+.slide-area .timerBar::before {
+  background-color: #a09a9aa9;
+}
+
+.slide-area .timerBar::after {
+  width: 0;
+  background-color: #ffffff;
+  -webkit-animation: aniPrgressbar 5s ease-in-out .1s;
+  animation: aniPrgressbar 5s ease-in-out .1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.hero-wrap .slide-area .timerBar::after {
+  width: 0;
+  background-color: #ffffff;
+  -webkit-animation: aniPrgressbar 7s ease-in-out .1s;
+  animation: aniPrgressbar 7s ease-in-out .1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+
+/* hero */
+.hero-wrap .slide-area {
+  height: 658px;
+}
+
+.hero-wrap .slide-area .swiper-slide {
+  display: block;
+  background-repeat: no-repeat;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+@-webkit-keyframes aniPrgressbar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 50px;
+  }
+}
+
+@keyframes aniPrgressbar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 50px;
+  }
+}
+
